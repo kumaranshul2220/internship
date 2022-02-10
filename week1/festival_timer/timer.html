@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="home.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body>
+    <div align="left">
+        <input id ="back" align="left" type="submit"  value="Back to Home" class="btn" onclick="f1()" > 
+    </div>
+
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var fdt1=localStorage.getItem("fdt");
+var nm=localStorage.getItem("fname1");
+
+var countDownDate = new Date(fdt1).getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  if (distance <= 0) {
+    clearInterval(x);
+    return fn();
+  }
+  if(hours>=0 && hours<=9)
+  {
+    hours="0"+hours;
+  }
+  if(minutes>=0 && minutes<=9)
+  {
+    minutes="0"+minutes;
+  } 
+  if(seconds>=0 && seconds<=9)
+  {
+    seconds="0"+seconds;
+  }  
+ 
+  
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  
+}, 1000);
+
+function f1()
+    {
+    
+    window.location.href="./home.html";
+    }
+    function fn()
+    {
+        
+        var str1=nm;
+    
+    
+    window.location.href="./finalp.html";
+    }
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<! DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="home.css">
+    <title>Festival Timer </title>
+    
+</head>
+<body>
+    <div id= "bl">
+        <div id= "ab"  >
+            
+
+            
+            <table cellspacing="2" align="center" cellpadding="8" border="0" width="20%">
+                <tr>
+                    <td >Festival Name :</td>
+                    <td><input style="display:block" class="al" type="text" placeholder="" id="fname" class="tb" ></td>
+                </tr>
+                <tr>
+                    <td  >Festival Date :</td>
+                    <td ><input style="display:block" class="al" id="fdate" type="datetime-local" placeholder=" "   ></td>
+                    
+                </tr>
+                <tr>
+                    
+                    <td style="color:grey;" align="left">
+                        
+                        <input   id="fetch" align="right" type="submit"  value="Fetch Timer" class="btn" onclick="fd()" >
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    
+
+    function fd()
+    {
+    
+
+
+    var date=document.getElementById("fdate");
+    var name=document.getElementById("fname");
+    localStorage.setItem("fdt",date.value);
+    localStorage.setItem("fname1",name.value);
+    window.location.href="./timer.html"; 
+    
+    
+    }
+
+</script>
+</html>

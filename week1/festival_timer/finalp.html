@@ -1,0 +1,41 @@
+<! DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="home.css">
+    <title="Celebrate">
+     </title>
+</head>
+<body>
+    <div>
+        <p>
+            <input id="final" align="right" type="submit" value="Back to Home page" class="btn" onclick="fhome()" >
+            </p>
+    </div>
+    <div id="finaldiv">
+
+    <h1><b>Celebrate</b></h1>
+    <h1 id ="cel"><b></b></h1>
+    
+</div>
+
+
+</body>
+<script>
+
+    function f2()
+    {
+    var str2=localStorage.getItem("fname1");
+    var t=document.getElementById("cel");
+    t.innerHTML=str2;
+    
+    
+    }
+    f2();
+    function fhome()
+    {
+        window.location.href="./home.html";
+    }
+   
+
+</script>
+</html>

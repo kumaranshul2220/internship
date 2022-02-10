@@ -1,0 +1,105 @@
+<! DOCTYPE html>
+<html>
+<head>
+    <title>Signup form </title>
+    <meta charset="UTF-8">
+    <meta name="description" content="This field contains information about your page. It is usually around two sentences long.">.
+    <meta name="Anshul kumar" content="just signup">
+
+
+
+
+    
+
+</head>
+<body style="background-color: rgb(77, 53, 23);">
+    <div id= "main">
+        <div class="signupdet">
+            <table cellspacing="2" align="center" cellpadding="8" border="0">
+                <tr>
+                    <td style=" color:blue;" align="right">Enter Name :</td>
+                    <td><input type="text" placeholder="" id="r1" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td style=" color:blue;" align="right">Enter Emailid :</td>
+                    <td><input type="text" placeholder=" " id="r2" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td style=" color:blue;" align="right">Enter Contact no. :</td>
+                    <td><input type="text" placeholder=" " id="r3" class="tb" /></td>
+                    </tr>
+                <tr>
+                    <td style=" color:blue;" align="right">Enter Address :</td>
+                    <td><input type="text" placeholder=" " id="r4" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td style=" color:blue;" align="right">Enter Password :</td>
+                    <td><input type="password" placeholder="" id="r5" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td style=" color:blue;" align="right">Gender :</td>
+                    <td>
+                        
+                        <select >
+                            <option value= "" disabled selected hidden >select</option>
+                            
+                            <option value= "Male">Male</option>
+                            <option value= "Female">Female</option>
+                        </select>
+
+                    </td>
+
+                    </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        
+                        <input type="submit" value="Submit" class="btn" onClick="signup()" />
+                    </td>
+                </tr>
+            </table>
+            <img class="center" src="hello.jpg" alt="Cloudy Sky">
+        </div>
+    </div>
+            
+
+</body>
+<style>
+.center{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+<script type="text/javascript"  >
+
+    function signup()
+    {
+        var name= document.getElementById("r1").value;
+        var email=document.getElementById("r2").value;
+        var contact=document.getElementById("r3").value;
+        var address=document.getElementById("r4").value;
+        var pwd=document.getElementById("r5").value;
+
+      
+        //var gender=document.getElementById("r6").value;
+        
+        if(name=='')
+      {
+          alert('enter your name');
+      }
+      
+      else if(email=='')
+      {
+          alert('enter your email id');
+      }
+  
+      
+      else if(pwd=='')
+      {
+          alert('enter Password');
+      }
+    }  
+      </script>
+</html>
