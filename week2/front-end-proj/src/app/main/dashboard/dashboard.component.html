@@ -1,0 +1,44 @@
+<div  class="counter">
+    <div  class="row" class="d-flex justify-content-center" >
+        <div class=" col-4 ">
+            <h2 class="element">User:{{count}}</h2>
+        </div>
+        <div class=" col-4 ">
+            <h2 class="element">Profies:{{count}}</h2>
+        </div>
+        <div class=" col-4 ">
+            <h2 class="element">Clients:{{count}}</h2>
+        </div>       
+    </div> 
+    <a class="link" routerLink="/auth/login">LogOut</a> 
+</div>
+<div class="dash">
+    <div class="container mt-3">
+        <h2>Top Clients</h2>
+        <button (click)="showDetails()" class="btn-dark">ShowClient</button>
+        <table *ngIf="true" class="table table-hover table-dark">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Gender</th>
+              <th>Company</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor="let data of profiles;let i =index">
+              <td *ngFor="let detail of data|keyvalue">{{detail.value}}</td>
+              <td>
+                <button id={{i}} type="button" class="btn btn-info" (click)="view($event)">View</button>
+                <button id={{i}} type="button" class="btn btn-primary" (click)="edit($event)">Edit</button>
+              </td>
+            </tr> 
+          </tbody>
+        </table>
+      </div>
+      
+</div>
+<div >
+  
+</div>

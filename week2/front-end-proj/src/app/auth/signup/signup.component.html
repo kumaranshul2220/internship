@@ -1,0 +1,53 @@
+<nav class="navbar navbar-dark bg-dark justify-content-between">
+    <a class="navbar-brand"></a>
+    <form class="form-inline">
+      <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+      <button class="btn btn-outline-success my-2 my-sm-0" type="Login" routerLink="/auth/login">Login</button>
+      <span></span>
+      
+    </form>
+  </nav>
+
+<div class="container-fluid" class="cl">
+    
+    
+    <form [formGroup]="signForm" (ngSubmit)="callpost()" class="form2" >
+        
+        <div class="form-group">
+            <label class="bg">Email</label>
+        <input  formControlName="email"  class="form-control">
+        <span class="bg1" *ngIf="emailValidator && emailValidator.invalid && emailValidator.touched">  Username is required</span>
+        </div>
+
+        <div class="form-group">
+            <label class="bg">Mobile</label>
+        <input  formControlName="mobile"  class="form-control">
+        <span class="bg1" *ngIf="mobileValidator && mobileValidator.invalid && mobileValidator.touched">  Mobile number is required</span>
+        </div>
+        
+       
+        <div class="form-group">
+
+            <label class="bg">password</label>
+            <input formControlName="password"  class="form-control" type="password">
+            <span class="bg1" *ngIf="passwordValidator && passwordValidator.invalid && passwordValidator.touched">  Minimum length of 8 for password is required</span>
+        </div>
+        <div class="form-group">
+
+            <label class="bg">Confirm password</label>
+            <input formControlName="cnfPassword"  class="form-control" type="password" >
+            <span class="bg1" *ngIf="cnfPasswordValidator && cnfPasswordValidator.invalid && cnfPasswordValidator.touched"> Required<br></span>
+            <span class="bg1" *ngIf="!checkcnf && cnfPasswordValidator && cnfPasswordValidator.touched">Password not Matched</span>
+        </div>
+        <div class="form-group">
+            <input   type="submit"  value="Submit" class="btn btn-primary"  >
+        </div>
+
+        
+        
+    
+    </form>
+    
+    
+      
+</div>

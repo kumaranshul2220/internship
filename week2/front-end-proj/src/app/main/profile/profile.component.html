@@ -1,0 +1,41 @@
+<div class="side">
+    <div >
+        
+        <div class="border-end bg-white" >
+            <div class="sidebar-heading border-bottom bg-light">ACTIONS</div>
+            <div class="list-group list-group-flush" class="p-3 mb-2 bg-info text-dark">
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"  routerLink="/main/dashboard">Profiles</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"  routerLink="/auth/login">LogOut</a>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    
+</div>
+<div class="side">
+    <table class="table" >
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Company</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr>
+            <td *ngFor="let data of userData | keyvalue">{{data.value}}</td>
+            
+          </tr>
+          
+        </tbody>
+      </table>
+</div>
+<div>
+  <button (click)="observe()">Observe data </button>
+  <p>{{UData |json}}</p>
+  <p>{{parentMessage}}</p>
+
+
